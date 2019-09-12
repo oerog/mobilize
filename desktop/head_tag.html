@@ -1,0 +1,53 @@
+<script type="text/discourse-plugin"version="0.8.18">
+    if (settings.large_avatar) {
+                api.changeWidgetSetting('post-avatar', 'size', '90');
+    }
+</script>
+<script>
+function navDropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+<script type="text/x-handlebars" data-template-name="components/categories-with-featured-topics">
+
+   <!-- Display Categories with Featured Topics on Larger Screens -->
+   <div class='large-screen'>
+     {{categories-only categories=categories
+                  latestTopicOnly=latestTopicOnly
+                  showTopics="true"}}   
+    </div> 
+    
+   <!-- Display Categories Only with Navigation Button on Smaller Screens -->
+    <div class='small-screen'>
+        <div class='column categories'>
+          {{categories-only categories=categories}}
+        </div>
+    </div>
+    <div class='column navigation-links'>
+        <div class="dropdown">
+            <button onclick="navDropdown()" class="dropbtn btn btn-default combo-box-header">
+                Navigation Links <svg class="fa d-icon d-icon-caret-right svg-icon caret-icon svg-string" xmlns="http://www.w3.org/2000/svg" style="undefined"><use xlink:href="#caret-right"></use></svg>
+            </button>
+             <div id="myDropdown" class="dropdown-content">
+                <a href="/latest">Latest</a>
+                <a href="/new">New</a>
+                <a href="/unread">Unread</a>
+                <a href="/top">Top</a>
+                <a href="/posted">My Posts</a>
+                <a href="/unread">Unread</a>    
+            </div>
+        </div> 
+    </div>
+</script>
