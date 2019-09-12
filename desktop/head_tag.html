@@ -21,7 +21,6 @@ window.onclick = function(event) {
 } 
 </script>
 <script type="text/x-handlebars" data-template-name="components/categories-with-featured-topics">
-
    <!-- Display Categories with Featured Topics on Larger Screens -->
    <div class='large-screen'>
      {{categories-only categories=categories
@@ -29,7 +28,7 @@ window.onclick = function(event) {
                   showTopics="true"}}   
     </div> 
     
-   <!-- Display Categories Only with Navigation Button on Smaller Screens -->
+    <!-- Display Categories Only with Navigation Button on Smaller Screens -->
     <div class='small-screen'>
         <div class='column categories'>
           {{categories-only categories=categories}}
