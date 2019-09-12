@@ -2,7 +2,17 @@ dark_theme:
   type: bool
   default: false
   description:
-    en: 'Select to for use with Dark Color Palette'
+    en: 'Select to for use with a Dark Color Palette.'
+post_border_color:
+  type: string
+  default: "#D5D5D5"
+  description:
+    en: 'Custom border color between posts. Dark theme option above must NOT be selected.'
+embedded_post_border_color:
+  type: string
+  default: "#C5C5C5"
+  description:
+    en: 'Custom border color around embedded posts. Must also select custom colors above.'        
 large_avatar:
   type: bool
   default: false
