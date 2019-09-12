@@ -40,6 +40,9 @@
         padding-top: 25px
     }
 }
+.topic-avatar, .topic-body {
+    border-top: 2px solid $post_border_color;
+}
 /************** Style Desktop for Mobile **************/
 @media (max-width: 629px) {
     body, html {
@@ -118,9 +121,6 @@
     }
     .post-menu-area {
         margin: 5px 0 15px;
-    }
-    .topic-avatar, .topic-body {
-        border-top: 2px solid $post_border_color;
     }
     .topic-body {
         padding: 15px 10px 0 20px;
