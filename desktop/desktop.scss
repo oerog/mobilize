@@ -1,5 +1,3 @@
-$post_border_color: #d5d5d5; 
-$embedded_post_border_color: #c5c5c5; 
 @if $dark_theme == "true"  {
     $post_border_color: #555;
     $embedded_post_border_color: #888;
