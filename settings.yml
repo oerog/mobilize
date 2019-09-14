@@ -17,7 +17,7 @@ large_avatar:
   type: bool
   default: false
   description:
-    en: 'Select for use with large (90px vs 45px) avatars on screens > 630px'
+    en: 'Select for use with large (90px vs 45px) avatars on screens > 767px'
 reminder_message: 
   type: bool
   default: false
