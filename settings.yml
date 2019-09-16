@@ -22,7 +22,7 @@ reminder_message:
   type: bool
   default: false
   description:
-    en: 'Select to show dismissible reminder message below header if user is in Mobile View to use in Desktop View. Message sets a cookie when dismissed and doesn't display again for 30 days.'
+    en: 'Select to show dismissible reminder message below header'
 message_color: 
   type: string
   default: "#FFFFFF"
