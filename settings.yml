@@ -2,7 +2,7 @@ dark_theme:
   type: bool
   default: false
   description:
-    en: 'Select to for use with a Dark Color Palette.'
+    en: 'Select for use with a Dark Color Palette.'
 post_border_color:
   type: string
   default: "#D5D5D5"
@@ -22,7 +22,7 @@ reminder_message:
   type: bool
   default: false
   description:
-    en: 'Select to show dismissible reminder message below header to use in Desktop View. Message sets a cookie when dismissed.'
+    en: 'Select to show dismissible reminder message below header if user is in Mobile View to use in Desktop View. Message sets a cookie when dismissed.'
 message_color: 
   type: string
   default: "#FFFFFF"
