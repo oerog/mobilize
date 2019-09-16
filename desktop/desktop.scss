@@ -18,7 +18,7 @@
     height: 45px;
   }
 }
-@media (max-width: 629px) {
+@media (max-width: 767px) {
     .topic-avatar {
         width: 45px !important;
         img.avatar {
@@ -27,8 +27,8 @@
         }
     }
 }
-/**** Settings for > 630px ***/
-@media (min-width: 630px){
+/**** Settings for > 768px ***/
+@media (min-width: 768px){
      .topic-body {
         padding: 25px 10px 0 20px;
     }
@@ -40,11 +40,150 @@
         padding-top: 25px
     }
 }
+/********** Embedded Posts All Sizes *********/
 .topic-avatar, .topic-body {
     border-top: 2px solid $post_border_color;
 }
+.embedded-posts .topic-body { 
+   	border-top:none !important;
+    padding: 0px;
+}
+.embedded-posts.topic-body {
+    border: 1px solid $embedded_post_border_color;
+    border-bottom:none;
+    padding: 0;
+    margin-top: 10px;
+    max-width: 700px;
+}
+.embedded-posts.top .row {
+    padding: 0 0 15px 0;
+}
+.embedded-posts.top  .topic-avatar{
+    border-top: none !important;
+    padding:0 !important;
+    position: relative;
+    right: 24px;
+    bottom: 15px;
+}
+.embedded-posts.top .topic-body .topic-meta-data {
+    padding: 0 11px 0.25em 0px;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 5px;
+}
+.embedded-posts.bottom .row {
+    padding: 20px 0 25px;
+    border: 1px solid $embedded_post_border_color;
+}
+.embedded-posts.bottom .topic-body .topic-meta-data {
+    padding: 0 11px 0.25em 0px;
+    margin-bottom: 20px;
+ }
+.embedded-posts.bottom .topic-body {
+    position: relative;
+    top: 10px;
+}
+.embedded-posts.bottom  .topic-avatar{
+    border-top: none !important;
+    padding:0 !important;
+    position: relative;
+    right: 24px;
+    bottom: 5px;
+}
+.embedded-posts .collapse-down, .embedded-posts .collapse-up {
+    position: absolute;
+    border: 1px solid $embedded_post_border_color;
+}
+button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
+    position: relative;
+    top: 60px;
+}
+.embedded-posts .d-icon-arrow-up {
+    position: relative;
+    top: 5px;
+}
+/***** Embedded Posts < 768px  *********/
+@media (max-width: 767px) {    
+    .embedded-posts.top {
+        border-bottom: none;
+        margin-left: 25px;
+        width: 88%;
+    }
+    .embedded-posts.bottom {
+        margin-left: 25px;
+        margin-bottom: 20px;
+        width: 90%;
+        padding:  0 0;
+        max-width: 700px;
+    }
+    @media (min-width: 420px) {
+        .embedded-posts.top {
+            border-bottom: none;
+            width: 89%;
+        }
+        .embedded-posts.bottom {
+            width: 91%;
+            padding:  0 0;
+            max-width: 700px;
+        }
+    }    
+    @media (min-width: 630px) {
+        .embedded-posts.top {
+            border-bottom: none;
+                width: 89%;
+        }
+        .embedded-posts.bottom {
+             margin-bottom: 25px;
+            width: 95%;
+            padding:  0 0;
+            max-width: 700px;
+        }
+    }
+    .embedded-posts .topic-body {     
+        width: calc(100% - 45px); 
+        padding-right: 1px;
+    } 
+    .embedded-posts.bottom .topic-body .topic-meta-data, .embedded-posts.top .topic-body .topic-meta-data {
+        padding-right: 5px;        
+    } 
+}
+/***** Embedded Posts > 768px  *********/ 
+@media (min-width: 768px){
+    .embedded-posts.top {
+        border-bottom: none;
+        margin-left: 85px;
+        max-width: 755px;
+    }
+    @media (max-width: 120000px){
+    .embedded-posts.top {
+        width: calc(100% - 95px);
+        }
+    }
+    .embedded-posts.bottom {
+        margin-left: -45px;
+        margin-bottom: 25px;
+        padding: 0;
+        max-width: 755px;
+    }
+    @if $large_avatar == "false"  {
+        .embedded-posts.top {
+            max-width: 705px;
+            width: calc(100% - 140px);
+        }
+        .embedded-posts.bottom {
+            margin-left: 0px;
+            max-width: 705px;
+        }
+    }
+    @media (max-width: 880px){
+        .topic-body {
+            box-sizing: border-box;
+            width: calc(100% - 110px);
+        }
+    }
+}
 /************** Style Desktop for Mobile **************/
-@media (max-width: 629px) {
+@media (max-width: 767px) {
     body, html {
         overflow-x: hidden; 
     }
@@ -148,6 +287,12 @@
     .topic-body .regular.contents {
         margin-left: -65px;
         padding-left: 0;
+    }
+    @media (min-width: 630px) {
+    .topic-body {
+        box-sizing: border-box;
+        width: calc(100% - 80px);
+        }
     }
     aside.onebox {
         margin-bottom: 1em;
@@ -291,82 +436,6 @@
             width:50%;
         }
     }
-    /***** Embedded Posts (The reason we are doing this) *********/
-    .embedded-posts .topic-body { 
-       	border-top:none !important;
-        padding: 0px;
-    }
-    .embedded-posts.topic-body {
-        border: 1px solid $embedded_post_border_color;
-        border-bottom:none;
-        padding: 0;
-        margin-top: 10px;
-        max-width: 700px;
-    }
-    .embedded-posts.top {
-        border-bottom: none;
-        margin-left: 25px;
-        width: 88%;
-    }
-    @media (min-width: 468px) {
-        .embedded-posts.top {
-        border-bottom: none;
-        margin-left: 25px;
-        width: 89%;
-        }
-    }
-    .embedded-posts.top .row {
-        padding: 0 0 15px 0;
-    }
-    .embedded-posts.top  .topic-avatar{
-        border-top: none !important;
-        padding:0 !important;
-        position: relative;
-        right: 24px;
-        bottom: 15px;
-    }
-    .embedded-posts.top .topic-body .topic-meta-data {
-        padding: 0 11px 0.25em 0px;
-        margin-bottom: 0;
-        position: relative;
-        bottom: 5px;
-    }
-    .embedded-posts.bottom {
-        margin-left: 25px;
-        margin-bottom: 25px;
-        width: 90%;
-        padding:  0 0;
-        max-width: 700px;
-    }
-    .embedded-posts.bottom .row {
-        padding: 20px 0 25px;
-        border: 1px solid $embedded_post_border_color;
-    }
-    
-    .embedded-posts.bottom .topic-body .topic-meta-data {
-        padding: 0 11px 0.25em 0px;
-        margin-bottom: 20px;
-     }
-    
-    .embedded-posts.bottom .topic-body {
-        position: relative;
-        top: 10px;
-    }
-    .embedded-posts.bottom  .topic-avatar{
-        border-top: none !important;
-        padding:0 !important;
-        position: relative;
-        right: 24px;
-    }
-    .embedded-posts .collapse-down, .embedded-posts .collapse-up {
-        position: absolute;
-        border: 1px solid $embedded_post_border_color;
-    }
-    button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
-        position: relative;
-        top: 60px;
-    }
-    
     /*********** Composer ************/
     .composer-popup {
         display:none !important;
@@ -413,7 +482,6 @@
         padding-bottom: 3px;
         margin: 0;
     }
-    
     #reply-control .reply-to {
         margin: 5px 0;
     }
@@ -431,7 +499,6 @@
         right: 0px;
         bottom: 0px;
     }
-    /*don't remember what this does but I think the admin tools were popping up somewhere weird when the Timeline was expanded before I added this*/
     .show-topic-admin { 
         position: relative;
     }
@@ -445,7 +512,6 @@
     #topic-progress-wrapper .topic-admin-menu-button-container {
         left: -24px;
     }
-    
     /*********** User Profiles ********/
     #user-card {
         left: 5px !important; 
@@ -500,7 +566,6 @@
        right: 15px;
        width: 90%;
     }
-    
     /****** Admin Panel ******/
     .admin-customize .themes-list, .content-list.color-schemes {
         width: 100%;
@@ -541,16 +606,14 @@
     .lazyYT {
         max-width: 100%;
     }
-    /*.category-box {
-        display:none !important;
-    }*/
     .signup-cta{
         max-width:85%;
     } 
     .names span.first {
         overflow: visible;
     }
-} /************end of max 629px ***************/
+    
+} /************end of max 767px ***************/
 
 /***** Make Boxes with Subcatorgies/Featured Topics Responsive  *****/
 @media (max-width: 991px) {
@@ -578,7 +641,7 @@
         width: 100%;
     }
 }
-/******* Dropdown Button and Template Override for Categories with Featured *******/
+/******* Dropdown Button and Categories with Featured *******/
 .navigation-links {
     padding: 0 10px 12px;
 }
@@ -605,7 +668,7 @@
   position: absolute;
   bottom: 0;
   left: 155px;
-  background-color:#444;
+  background-color:$secondary;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -616,7 +679,6 @@
     padding: 6px 10px;
     text-decoration: none;
     color: $primary;
-    font-weight: bold;
     font-size: 1em;
     line-height: 1.2;
     display: block;
@@ -625,6 +687,20 @@
     background-color: $tertiary
 }
 .show {display:block;} 
+table.category-list.with-topics .category {
+    width: 43%
+}
+@media  (max-width: 992px) {
+    table.category-list.with-topics .category {
+        width: 38%
+    }
+}
+@media  (max-width: 767px) {
+    table.category-list.with-topics .category {
+        width: 33%
+    }
+}
+/**** Switch between Categories and Featured Topics and Categories Only in HEAD template override *****/
 @media (max-width: 629px) {
     .large-screen {
         display: none !important; 
@@ -654,93 +730,5 @@
 @media (max-width: 924px) {
     .timeline-container {
         margin-left: 0 !important;
-    }
-}
-/***** Embedded Posts Settings > 630px *********/
-@media (min-width: 630px){
-    .embedded-posts .topic-body { 
-       	border-top:none !important;
-        padding: 0px;
-    }
-    .embedded-posts.topic-body {
-        border: 1px solid $embedded_post_border_color;
-        border-bottom:none;
-        padding: 0;
-        margin-top: 10px;
-        max-width: 700px;
-    }
-    .embedded-posts.top {
-        border-bottom: none;
-        margin-left: 85px;
-        max-width: 755px;
-    
-    }
-    @media (max-width: 120000px){
-    .embedded-posts.top {
-        width: calc(100% - 90px);
-        }
-    }
-    .embedded-posts.top .row {
-        padding: 0 0 15px 0;
-    }
-    .embedded-posts.top  .topic-avatar{
-        border-top: none !important;
-        padding:0 !important;
-        position: relative;
-        right: 24px;
-        bottom: 15px;
-    }
-    .embedded-posts.top .topic-body .topic-meta-data {
-            padding: 0 11px 0.25em 0px;
-            margin-bottom: 0;
-            position: relative;
-            bottom: 5px;
-    }
-    .embedded-posts.bottom {
-        margin-left: -45px;
-        margin-bottom: 25px;
-        padding: 0;
-        max-width: 755px;
-    }
-    @if $large_avatar == "false"  {
-        .embedded-posts.top {
-            max-width: 705px;
-        }
-        .embedded-posts.bottom {
-            margin-left: 0px;
-            max-width: 705px;
-        }
-    }
-    .embedded-posts.bottom .row {
-        padding: 20px 0 25px;
-        border: 1px solid $embedded_post_border_color;
-    }
-    .embedded-posts.bottom .topic-body .topic-meta-data {
-            padding: 0 11px 0.25em 0px;
-            margin-bottom: 20px;
-     }
-    .embedded-posts.bottom .topic-body {
-        position: relative;
-        top: 10px;
-    }
-    .embedded-posts.bottom  .topic-avatar{
-        border-top: none !important;
-        padding:0 !important;
-        position: relative;
-        right: 24px;
-    }
-    .embedded-posts .collapse-down, .embedded-posts .collapse-up {
-        position: absolute;
-        border: 1px solid $embedded_post_border_color;
-    }
-    button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
-        position: relative;
-        top: 60px;
-    }
-    @media (min-width: 630px) and (max-width: 880px){
-    .topic-body {
-        box-sizing: border-box;
-        width: calc(100% - 110px);
-        }
     }
 }
