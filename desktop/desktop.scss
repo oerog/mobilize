@@ -184,16 +184,20 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
 }
 /************** Style Desktop for Mobile **************/
 @media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden; 
+    }
+    tbody {
+        border-top:none !important;
+    }
     /********* Header Extra Info on Posts *********/
     #list-area .show-more.has-topics .alert {
         padding: 6px 35px 6px 14px;
         margin-top: -27px;
     }
-    
     .extra-info.two-rows h1 {
         font-size: 1.1em;        
     } 
-    
     @media (max-width: 570px){
         .extra-info-wrapper {
             display:flex;
@@ -276,74 +280,6 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
             margin: 5% 25%;
             width:50%;
         }
-    }    
-}
-@media (max-width: 629px) {
-    body, html {
-        overflow-x: hidden; 
-    }
-    tbody {
-        border-top:none !important;
-    }
-    /******************************************************/
-    /******* Make Latest Topics Pages Fit on Mobile *******/ 
-    /******************************************************/
-    td.main-link {
-        width: 100%;
-    }
-    table.topic-list thead, td.posters {
-    	display: none;
-    }
-    .topic-list .num a.badge-posts {
-    	position: relative;
-    	left: 80px;
-    	top: -15px;
-    }
-    .topic-list td.num.posts-map.posts {
-        padding: 4px 0 0 0;
-        position: relative;
-        right: 69px;
-        max-width: 0px;
-    }
-    .topic-list td.num.age {
-    	position: relative;
-    	left: 0px;
-    	padding-top:28px;
-    	text-align: left; 
-    }
-    .topic-list td.num.views {
-        display: none;
-    }
-    .container.list-container #header-list-area {
-        display: none;
-    }
-    .suggested-topics .topics {
-        border-top: 2px solid $post_border_color;
-    }
-    .list-controls {
-        margin-bottom: 14px;
-    }
-    .nav-pills>li {
-        margin-bottom: 10px;
-    }
-    .navigation-topics .categories-list .topic-post-badges {
-        position: absolute;
-        right: 70px;
-    }
-    .navigation-topics .categories-list .topic-list .main-link a.title {
-        margin-right: 26px;
-    }
-    .subcategory .category-name {
-        font-size: 1em;
-    }
-    .badge-wrapper {
-        font-size: 1em;
-    }
-    .list-controls .btn {
-        float: none;
-    }
-    .btn-default.edit-category.btn.btn-icon-text {
-        float: right;
     }
      /********** Topic Posts ***********/
     .regular {
@@ -416,7 +352,70 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     }
     .suggested-topics .topics {
         margin: 0 5px 0 -10px;
+    }    
+}
+@media (max-width: 629px) {
+    /******************************************************/
+    /******* Make Latest Topics Pages Fit on Mobile *******/ 
+    /******************************************************/
+    td.main-link {
+        width: 100%;
     }
+    table.topic-list thead, td.posters {
+    	display: none;
+    }
+    .topic-list .num a.badge-posts {
+    	position: relative;
+    	left: 80px;
+    	top: -15px;
+    }
+    .topic-list td.num.posts-map.posts {
+        padding: 4px 0 0 0;
+        position: relative;
+        right: 69px;
+        max-width: 0px;
+    }
+    .topic-list td.num.age {
+    	position: relative;
+    	left: 0px;
+    	padding-top:28px;
+    	text-align: left; 
+    }
+    .topic-list td.num.views {
+        display: none;
+    }
+    .container.list-container #header-list-area {
+        display: none;
+    }
+    .suggested-topics .topics {
+        border-top: 2px solid $post_border_color;
+    }
+    .list-controls {
+        margin-bottom: 14px;
+    }
+    .nav-pills>li {
+        margin-bottom: 10px;
+    }
+    .navigation-topics .categories-list .topic-post-badges {
+        position: absolute;
+        right: 70px;
+    }
+    .navigation-topics .categories-list .topic-list .main-link a.title {
+        margin-right: 26px;
+    }
+    .subcategory .category-name {
+        font-size: 1em;
+    }
+    .badge-wrapper {
+        font-size: 1em;
+    }
+    .list-controls .btn {
+        float: none;
+    }
+    .btn-default.edit-category.btn.btn-icon-text {
+        float: right;
+    }
+
     /******** Topic Map  ********/
     .topic-map {
         margin: 20px -5px 20px -65px;
@@ -610,7 +609,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     .names span.first {
         overflow: visible;
     }
-} /************end of max 767px ***************/
+} /************end of max 629px ***************/
 
 /***** Make Boxes with Subcatorgies/Featured Topics Responsive  *****/
 @media (max-width: 991px) {
