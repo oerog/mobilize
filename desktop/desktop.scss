@@ -27,7 +27,7 @@
         }
     }
 }
-/**** Settings for > 768px ***/
+/**** Settings for > 767px ***/
 @media (min-width: 768px){
      .topic-body {
         padding: 25px 10px 0 20px;
@@ -147,7 +147,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         padding-right: 5px;        
     } 
 }
-/***** Embedded Posts > 768px  *********/ 
+/***** Embedded Posts > 767px  *********/ 
 @media (min-width: 768px){
     .embedded-posts.top {
         border-bottom: none;
@@ -184,6 +184,101 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
 }
 /************** Style Desktop for Mobile **************/
 @media (max-width: 767px) {
+    /********* Header Extra Info on Posts *********/
+    #list-area .show-more.has-topics .alert {
+        padding: 6px 35px 6px 14px;
+        margin-top: -27px;
+    }
+    
+    .extra-info.two-rows h1 {
+        font-size: 1.1em;        
+    } 
+    
+    @media (max-width: 570px){
+        .extra-info-wrapper {
+            display:flex;
+            line-height: 1.2;
+            padding: 0 0 0 .25em;
+        }
+        .extra-info-wrapper .categories-wrapper  {
+            font-size: .9em;        
+        }
+        .extra-info.two-rows h1  {
+            font-size: 1em;
+        }
+     
+        .archetype-regular .d-header-icons .icon {
+            padding: 0;    
+        }
+    }    
+    .extra-info-wrapper .badge-wrapper .badge-category .category-name {
+        font-weight:normal;
+    }
+    /********** Topic Footer **********/
+    .topic-status-info {
+        padding: 5px 0;
+    }
+    #topic-footer-buttons {
+        margin: 0px -5px 10px -10px;
+        padding: 12px 12px 5px;
+    }
+    button#topic-footer-button-bookmark span.d-button-label, button#topic-footer-button-share-and-invite span.d-button-label, button#topic-footer-button-flag span.d-button-label {
+        display: none;
+    }
+    #topic-footer-buttons .btn {
+        margin-right: 7px;
+        padding: 6px 10px;
+    }
+    .topic-footer-button.btn .d-icon {
+        margin-right: 0;
+    }
+    #topic-footer-buttons .topic-notifications-button {
+        display: flex;
+        align-items: center;
+    }
+    .topic-notifications-button .reason {
+        font-size: .95em;
+    }
+    @media (min-width: 340px) {
+        #topic-footer-buttons {
+            margin: 0px 0px 10px -5px;
+        }
+        #topic-footer-buttons .btn {
+            margin-right: 10px;
+        }    
+        .topic-notifications-button .reason {
+            font-size: 1em;
+        }
+    }
+    @media (min-width: 380px) {
+        #topic-footer-buttons {
+            margin: 0px 10px 10px 10x;
+            padding: 15px 15px 5px;
+        }
+    }
+    @media (min-width: 480px) {
+        #topic-footer-buttons {
+            margin: 0px 25px 10px 15px;
+        }
+    }
+    .dropdown-select-box.notifications-button.topic-notifications-options.has-selection{
+        padding-bottom: 7px;
+    }
+    .bootbox.modal { /*This is the "Are you sure you want to cancel your post" dialogue*/
+        font-size: .9em;
+        top: 20%;
+        left: 1%;
+        width: 98%;
+        margin: 30% 1% 0 0;
+    }
+    @media (min-width: 630px) {
+        .bootbox.modal { /*This is the "Are you sure you want to cancel your post" dialogue*/
+            margin: 5% 25%;
+            width:50%;
+        }
+    }    
+}
+@media (max-width: 629px) {
     body, html {
         overflow-x: hidden; 
     }
@@ -247,11 +342,10 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     .list-controls .btn {
         float: none;
     }
-    .staff.categories-list .list-controls .btn {
+    .btn-default.edit-category.btn.btn-icon-text {
         float: right;
     }
-    
-    /********** Topic Posts ***********/
+     /********** Topic Posts ***********/
     .regular {
         padding-left: 5px;
     }
@@ -323,39 +417,6 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     .suggested-topics .topics {
         margin: 0 5px 0 -10px;
     }
-    /********* Header Extra Info on Posts *********/
-    #list-area .show-more.has-topics .alert {
-        padding: 6px 35px 6px 14px;
-        margin-top: -27px;
-    }
-    
-    .extra-info.two-rows h1 {
-        font-size: 1.1em;        
-    } 
-    
-    @media (max-width: 570px){
-        .extra-info-wrapper {
-            display:flex;
-            line-height: 1.2;
-            padding: 0 0 0 .25em;
-        }
-        .extra-info-wrapper .categories-wrapper  {
-            font-size: .9em;        
-        }
-        .extra-info.two-rows h1  {
-            font-size: 1em;
-        }
-     
-        .archetype-regular .d-header-icons .icon {
-            padding: 0;    
-        }
-        .archetype-regular .logo-small {
-          /*  display: none;*/
-        }
-    }    
-    .extra-info-wrapper .badge-wrapper .badge-category .category-name {
-        font-weight:normal;
-    }  
     /******** Topic Map  ********/
     .topic-map {
         margin: 20px -5px 20px -65px;
@@ -372,69 +433,6 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     }
     .topic-map .links, .topic-map .information {
         overflow: auto;
-    }
-    /********** Topic Footer **********/
-    .topic-status-info {
-        padding: 5px 0;
-    }
-    #topic-footer-buttons {
-        margin: 0px -5px 10px -10px;
-        padding: 12px 12px 5px;
-    }
-    button#topic-footer-button-bookmark span.d-button-label, button#topic-footer-button-share-and-invite span.d-button-label, button#topic-footer-button-flag span.d-button-label {
-        display: none;
-    }
-    #topic-footer-buttons .btn {
-        margin-right: 7px;
-        padding: 6px 10px;
-    }
-    .topic-footer-button.btn .d-icon {
-        margin-right: 0;
-    }
-    #topic-footer-buttons .topic-notifications-button {
-        display: flex;
-        align-items: center;
-    }
-    .topic-notifications-button .reason {
-        font-size: .95em;
-    }
-    @media (min-width: 340px) {
-        #topic-footer-buttons {
-            margin: 0px 0px 10px -5px;
-        }
-        #topic-footer-buttons .btn {
-            margin-right: 10px;
-        }    
-        .topic-notifications-button .reason {
-            font-size: 1em;
-        }
-    }
-    @media (min-width: 380px) {
-        #topic-footer-buttons {
-            margin: 0px 10px 10px 10x;
-            padding: 15px 15px 5px;
-        }
-    }
-    @media (min-width: 480px) {
-        #topic-footer-buttons {
-            margin: 0px 25px 10px 15px;
-        }
-    }
-    .dropdown-select-box.notifications-button.topic-notifications-options.has-selection{
-        padding-bottom: 7px;
-    }
-    .bootbox.modal { /*This is the "Are you sure you want to cancel your post" dialogue*/
-        font-size: .9em;
-        top: 20%;
-        left: 1%;
-        width: 98%;
-        margin: 30% 1% 0 0;
-    }
-    @media (min-width: 630px) {
-        .bootbox.modal { /*This is the "Are you sure you want to cancel your post" dialogue*/
-            margin: 5% 25%;
-            width:50%;
-        }
     }
     /*********** Composer ************/
     .composer-popup {
@@ -612,7 +610,6 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     .names span.first {
         overflow: visible;
     }
-    
 } /************end of max 767px ***************/
 
 /***** Make Boxes with Subcatorgies/Featured Topics Responsive  *****/
