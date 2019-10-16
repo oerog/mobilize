@@ -11,6 +11,14 @@
         }
     }
 } 
+.topic-avatar {
+    width: 90px;
+        .avatar {
+            width: 90px;
+            height: 90px;
+    }
+}
+
 .embedded-posts .topic-avatar {
   width: 45px;
   img.avatar {
@@ -26,6 +34,12 @@
             height: 45px;
         }
     }
+}
+.topic-list thead {
+    background-color: $header-primary;
+}
+tr.topic-list-item {
+    border-bottom: 1px $post_border_color solid;
 }
 /**** Settings for > 767px ***/
 @media (min-width: 768px){
@@ -358,11 +372,28 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     /******************************************************/
     /******* Make Latest Topics Pages Fit on Mobile *******/ 
     /******************************************************/
+    .emoji-picker {
+        top:50% !important;
+        height: 250px !important;
+        width: 96%!important;
+        margin-left: 2% !important;
+        margin-right: 2% !important;
+    }
+    .emoji-picker .categories-column {
+       max-height: 245px !important;
+       overflow: hidden;
+    }
+    .topic-list td {
+         padding-right: 0 !important;
+
+     }
     td.main-link {
         width: 100%;
+        padding-left: 0;
+       padding-right: 10px !important;
     }
-    table.topic-list thead, td.posters {
-    	display: none;
+    /*table.topic-list thead,*/.activity.sortable.num, td.posters {
+    	display: none; 
     }
     .topic-list .num a.badge-posts {
     	position: relative;
@@ -372,14 +403,19 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     .topic-list td.num.posts-map.posts {
         padding: 4px 0 0 0;
         position: relative;
-        right: 69px;
+        right: 0px;
         max-width: 0px;
+
+    }
+    .topic-list td.num.posts-map.posts .number{
+        position: relative;
+        right: 35px; 
     }
     .topic-list td.num.age {
     	position: relative;
     	left: 0px;
-    	padding-top:28px;
-    	text-align: left; 
+    	padding-top:28px;        
+    	/*text-align: left; */
     }
     .topic-list td.num.views {
         display: none;
@@ -410,7 +446,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         font-size: 1em;
     }
     .list-controls .btn {
-        float: none;
+        float: right;
     }
     .btn-default.edit-category.btn.btn-icon-text {
         float: right;
@@ -611,102 +647,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     }
 } /************end of max 629px ***************/
 
-/***** Make Boxes with Subcatorgies/Featured Topics Responsive  *****/
-@media (max-width: 991px) {
-    .category-boxes-with-topics .category-box {
-        width: 48%;
-    }
-}
-@media (max-width: 600px) {
-    .category-boxes-with-topics .category-box {
-        width: 100%;
-    }
-}
-@media (max-width: 991px) {
-     .category-boxes .category-box {
-        width: 31%;
-    }
-}
-@media (max-width: 767px) {
-     .category-boxes .category-box {
-        width: 48%;
-    }
-}
-@media (max-width: 480px) {
-    .category-boxes .category-box {
-        width: 100%;
-    }
-}
-/******* Dropdown Button and Categories with Featured *******/
-.navigation-links {
-    padding: 0 10px 12px;
-}
-@media (min-width: 630px) {
-    .navigation-links {
-        padding: 16px 10px;
-    }
-}
-.dropbtn {
-  cursor: pointer;
-}
-.dropbtn:hover{
-  background-color: $tertiary !important;
-}
-.dropbtn:focus, .dropbtn:active {
-  background-color: $quaternary;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 155px;
-  background-color:$secondary;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-    margin: 0;
-    min-height: 1px;
-    padding: 6px 10px;
-    text-decoration: none;
-    color: $primary;
-    font-size: 1em;
-    line-height: 1.2;
-    display: block;
-}
-.dropdown-content a:hover {
-    background-color: $tertiary
-}
-.show {display:block;} 
-table.category-list.with-topics .category {
-    width: 43%
-}
-@media  (max-width: 992px) {
-    table.category-list.with-topics .category {
-        width: 38%
-    }
-}
-@media  (max-width: 767px) {
-    table.category-list.with-topics .category {
-        width: 33%
-    }
-}
-/**** Switch between Categories and Featured Topics and Categories Only in HEAD template override *****/
-@media (max-width: 629px) {
-    .large-screen {
-        display: none !important; 
-    }   
-}
-@media (min-width: 630px) {
-    .small-screen {
-        display: none !important; 
-    }   
-}
+
 /********** Timeline Container **************/
 @media (min-width: 1140px) {
         .timeline-container {
