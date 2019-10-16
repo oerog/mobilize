@@ -5,3 +5,13 @@
 aside.onebox .onebox-body .tweet-images {
     padding-top: 8px;
 }
+/***** hide bad  things *****/
+[aria-label="Impersonate"] {
+    display: none;
+}
+.highlighted {
+    animation: none !important
+}
+[data-category-id="19"] {
+  display: none;
+}
