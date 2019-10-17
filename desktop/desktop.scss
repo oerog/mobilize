@@ -383,17 +383,29 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
        max-height: 245px !important;
        overflow: hidden;
     }
+
+  thead .activity.num, td.posters {
+    	display: none; 
+    } 
+    .suggested-topics thead {
+        display:none;
+    }
+    h3.suggested-topics-title {
+        background-color: $header-primary;
+        font-weight: normal;
+        font-size: 1.1em;
+        color: $secondary-medium;
+        padding: 10px;
+        margin-bottom:0px;
+    }
     .topic-list td {
          padding-right: 0 !important;
-
-     }
+    }
+    
     td.main-link {
         width: 100%;
         padding-left: 0;
        padding-right: 10px !important;
-    }
-    /*table.topic-list thead,*/.activity.sortable.num, td.posters {
-    	display: none; 
     }
     .topic-list .num.age {
         text-align: left;
@@ -410,6 +422,10 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         right: 0px;
         max-width: 0px;
     }
+    .suggested-topics .topic-list td.num.posts-map.posts .number{
+        position: relative;
+        right: 65px; 
+    }
     .topic-list td.num.posts-map.posts .number{
         position: relative;
         right: 45px; 
@@ -424,9 +440,6 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     }
    .container.list-container #header-list-area {
         display: none;
-    }
-    .suggested-topics .topics {
-        border-top: 2px solid $post_border_color;
     }
     .list-controls {
         margin-bottom: 14px;
@@ -532,7 +545,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     .btn-primary.progress-back.btn.btn-icon-text {
         position: absolute;
         right: 0px;
-        bottom: 0px;
+        top: 0px;
     }
     .show-topic-admin { 
         position: relative;
