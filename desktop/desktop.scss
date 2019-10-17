@@ -395,6 +395,10 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     /*table.topic-list thead,*/.activity.sortable.num, td.posters {
     	display: none; 
     }
+    .topic-list .num.age {
+        text-align: left;
+        padding-left: 15px;
+    }
     .topic-list .num a.badge-posts {
     	position: relative;
     	left: 80px;
@@ -405,22 +409,20 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         position: relative;
         right: 0px;
         max-width: 0px;
-
     }
     .topic-list td.num.posts-map.posts .number{
         position: relative;
-        right: 40px; 
+        right: 45px; 
     }
     .topic-list td.num.age {
     	position: relative;
     	left: 0px;
     	padding-top:28px;        
-    	/*text-align: left; */
     }
     .topic-list td.num.views {
         display: none;
     }
-    .container.list-container #header-list-area {
+   .container.list-container #header-list-area {
         display: none;
     }
     .suggested-topics .topics {
