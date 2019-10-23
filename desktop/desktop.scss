@@ -306,7 +306,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         margin: 5px 0 15px;
     }
     .topic-body {
-        padding: 15px 10px 0 20px;
+        padding: 15px 0px 0 20px;
     }
     .topic-avatar {
         padding-left: 0;   
@@ -368,6 +368,17 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         margin: 0 5px 0 -10px;
     }    
 }
+@media (max-width: 767px) {
+    .user-preferences-page #main.stripes .wrap,
+    #main.stripes .topic-list td, 
+    #main.stripes .topic-list th.default {
+         padding-left: 15px !important;
+         padding-right: 15px !important;
+    }
+    .topic-list td {
+         padding-left: 5px !important;
+    }
+}
 @media (max-width: 629px) {
     /******************************************************/
     /******* Make Latest Topics Pages Fit on Mobile *******/ 
@@ -413,8 +424,11 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     }
     .topic-list .num a.badge-posts {
     	position: relative;
-    	left: 80px;
+    	left: 75px;
     	top: -15px;
+    }
+    #main-stripes .topic-list .num a.badge-posts {
+    	left: 65px;
     }
     .topic-list td.num.posts-map.posts {
         padding: 4px 0 0 0;
@@ -434,6 +448,16 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
     	position: relative;
     	left: 0px;
     	padding-top:28px;        
+    }
+    .topic-list .post-activity {
+    	position: relative;
+    	left: 10px;
+    	padding-top:28px;        
+    }
+    #main.stripes .topic-list .post-activity {
+    	position: relative;
+    	left: 0px;
+    	padding-top:28px;  
     }
     .topic-list td.num.views {
         display: none;
@@ -663,7 +687,7 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
 } /************end of max 629px ***************/
 
 
-/********** Timeline Container **************/
+/********** Timeline Container *************
 @media (min-width: 1140px) {
         .timeline-container {
           margin-left: 900px;
@@ -684,3 +708,4 @@ button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
         margin-left: 0 !important;
     }
 }
+*/
