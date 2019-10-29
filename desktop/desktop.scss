@@ -395,7 +395,7 @@ tr.topic-list-item {
     }    
 
     .topic-body {
-        border-top: 2px solid #555 !important;
+        border-top: 2px solid $post_border_color !important;
     }
     .embedded-posts.top .topic-body .topic-meta-data { 
         padding: 0px 0px 0 0px !important;
