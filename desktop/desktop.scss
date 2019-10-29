@@ -352,7 +352,7 @@ tr.topic-list-item {
     }
     #main.stripes .embedded-posts.top.topic-body {   
         margin-top: 10px;
-         border-top: 2px solid #555 !important;
+         border-top: 2px solid $post_border_color !important;
     }
     #main.stripes .embedded-posts .topic-body,
     .embedded-posts .topic-body{
