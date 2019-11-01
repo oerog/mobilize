@@ -296,7 +296,7 @@ tr.topic-list-item {
     padding: 0px;
     border-bottom: 1px solid $embedded_post_border_color;
     position: relative;
-     top: 38px;
+     top: 32px;
      padding-bottom: 10px;
 }
 
@@ -741,8 +741,7 @@ tr.topic-list-item {
     #main.wide-screen .embedded-posts .collapse-up  {
         top: 30px;
     }
-    #main.wide-screen .embedded-posts.bottom .row {
-    
+    #main.wide-screen .embedded-posts.bottom .row {    
          padding-bottom: 0px;
     }
 }
