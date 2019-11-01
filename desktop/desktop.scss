@@ -354,6 +354,29 @@ tr.topic-list-item {
         margin-top: 10px;
          border-top: 2px solid $post_border_color !important;
     }
+    #main.stripes .embedded-posts.top .topic-body {
+        width: 89% !important;
+        margin-left: -20px;
+    }  
+        .embedded-posts.top .topic-body {
+            width: 88% !important;
+            margin-left: -20px;
+    }  
+
+    @media (max-width: 420px) {         
+       .embedded-posts.top .topic-body {
+           margin-left: -30px;
+       }
+    } 
+    @media (min-width: 630px) {
+        #main.stripes .embedded-posts.top.topic-body {
+            margin-left: 65px;
+        }
+        #main.stripes .embedded-posts.top .topic-body {
+            width: 89% !important;
+            margin-left: -60px;
+        }        
+    }
     #main.stripes .embedded-posts .topic-body,
     .embedded-posts .topic-body{
         border-top: none !important;
